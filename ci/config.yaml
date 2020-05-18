@@ -1,0 +1,26 @@
+---
+# General stuff
+# -------------
+## Specifies the name of the buildingblock
+name: bb-gitversion
+## Specifies the destination of the docker image artifact
+destination: elbb/bb-gitversion
+## Specifies the version used for bb-gitversion
+bb-gitversion-version: 0.2.0
+
+# Git relevant stuff
+# ------------------
+## Specify the git repository to work with
+git_source: https://github.com/elbb/bb-gitversion.git
+## Specify the git branch to work with
+git_branch: test-integration
+## This enables/disables ssl verification of the git resource
+git_skip_ssl_verification: false
+
+# S3 relevant stuff
+# -----------------
+## Specify the S3 endpoint URI
+# Using docker hosts ip address for local environment when using min.io locally
+s3_endpoint: http://172.17.0.1:9000
+## This enables/disables the ssl verification for the S3 endpoint
+s3_disable_ssl: false
